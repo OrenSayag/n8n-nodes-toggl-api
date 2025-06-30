@@ -50,3 +50,54 @@ export type GetWorkspaceProjectsOptions = {
     only_me?: boolean;
     per_page?: number;
 };
+
+export type GetWorkspaceTimeEntriesResponse = {
+    user_id: number;
+    username: string;
+    project_id: number;
+    task_id: number | null;
+    billable: boolean;
+    description: string;
+    tag_ids: number[];
+    billable_amount_in_cents: number;
+    hourly_rate_in_cents: number;
+    currency: string;
+    time_entries: {
+        id: number;
+        seconds: number;
+        start: string;
+        stop: string;
+        at: string;
+        at_tz: string;
+    }[];
+    row_number: number;
+}[];
+
+export type GetWorkspaceTimeEntiresOptions = {
+    billable?: boolean;
+    client_ids?: (number | null)[];
+    description?: string;
+    endTime?: string;
+    end_date?: string;
+    enrich_response?: boolean;
+    first_id?: number;
+    first_row_number?: number;
+    first_timestamp?: number;
+    group_ids?: number[];
+    grouped?: boolean;
+    hide_amounts?: boolean;
+    max_duration_seconds?: number;
+    min_duration_seconds?: number;
+    order_by?: 'date' | 'user' | 'duration' | 'description' | 'last_update';
+    order_dir?: 'ASC' | 'DESC';
+    page_size?: number;
+    project_ids?: (number | null)[];
+    rounding?: number;
+    rounding_minutes?: 0 | 1 | 5 | 6 | 10 | 12 | 15 | 30 | 60 | 240;
+    startTime?: string;
+    start_date?: string;
+    tag_ids?: (number | null)[];
+    task_ids?: (number | null)[];
+    time_entry_ids?: number[];
+    user_ids?: number[];
+};

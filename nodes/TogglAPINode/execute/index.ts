@@ -1,5 +1,6 @@
 import { IExecuteFunctions } from 'n8n-workflow';
 import { getWorkspaceProjects } from './workspaces/get-workspace-projects';
+import { getWorkspaceTimeEntries } from './reports/search-time-entries';
 
 type ResourceOperationFunctions = {
     [resource: string]: {
@@ -10,5 +11,8 @@ type ResourceOperationFunctions = {
 export const resourceOperationsFunctions: ResourceOperationFunctions = {
     workspaces: {
         'get-workspace-projects': getWorkspaceProjects,
+    },
+    reports: {
+        'get-workspace-time-entries': getWorkspaceTimeEntries,
     },
 };

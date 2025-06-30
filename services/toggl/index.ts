@@ -1,13 +1,13 @@
-import axios, { AxiosInstance } from 'axios';
+import axios from 'axios';
+import { Reports } from './Reports';
 import { Workspaces } from './workspaces';
 
 const BASE_URL = 'https://api.track.toggl.com/api/v9/';
-// const BASE_REPORTS_URL = 'https://api.track.toggl.com/reports/api/v3/';
+const BASE_REPORTS_URL = 'https://api.track.toggl.com/reports/api/v3/';
 
 export class TogglApi {
-    private readonly client: AxiosInstance;
-    // private readonly reportsClient: AxiosInstance;
     workspaces: Workspaces;
+    reports: Reports;
     constructor(
         input: (
             | { type: 'api-token'; token: string }
@@ -23,11 +23,12 @@ export class TogglApi {
             password,
             username,
         };
-        this.client = axios.create({ auth, baseURL: input.baseUrl ?? BASE_URL });
-        // this.reportsClient = axios.create({
-        //     auth,
-        //     baseURL: input.baseReportsUrl ?? BASE_REPORTS_URL,
-        // });
-        this.workspaces = new Workspaces(this.client);
+        const client = axios.create({ auth, baseURL: input.baseUrl ?? BASE_URL });
+        const reportsClient = axios.create({
+            auth,
+            baseURL: input.baseReportsUrl ?? BASE_REPORTS_URL,
+        });
+        this.workspaces = new Workspaces(client);
+        this.reports = new Reports(reportsClient);
     }
 }
