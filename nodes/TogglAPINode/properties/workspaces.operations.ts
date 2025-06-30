@@ -17,6 +17,12 @@ export const workspacesOperationsOptions: INodeProperties = {
             description: 'Get Workspace Projects',
             value: 'get-workspace-projects',
         },
+        {
+            name: 'Get Workspace Users',
+            action: 'Get Workspace Users',
+            description: 'Get Workspace Users',
+            value: 'get-workspace-users',
+        },
     ],
     default: 'get-workspace-projects',
 };

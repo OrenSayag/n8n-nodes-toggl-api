@@ -101,3 +101,43 @@ export type GetWorkspaceTimeEntiresOptions = {
     time_entry_ids?: number[];
     user_ids?: number[];
 };
+
+export type GetWorkspaceUsersReturn = {
+    id: number;
+    uid: number;
+    user_id: number;
+    wid: number;
+    workspace_id: number;
+    admin: boolean;
+    organization_admin: boolean;
+    workspace_admin: boolean;
+    active: boolean;
+    email: string;
+    timezone: string;
+    '2fa_enabled': boolean;
+    inactive: boolean;
+    at: string; // ISO timestamp
+    name: string;
+    group_ids: number[] | null;
+    rate: number | null;
+    rate_last_updated: string | null;
+    labor_cost: number | null;
+    labor_cost_last_updated: string | null;
+    invite_url: string | null;
+    invitation_code: string | null;
+    avatar_file_name: string | null;
+    working_hours_in_minutes: number | null;
+    role: string;
+    view_edit_billable_rates: boolean;
+    view_edit_labor_costs: boolean;
+    is_direct: boolean;
+}[];
+
+export type GetWorkspaceUsersOptions = {
+    page?: number;
+    per_page?: number;
+    custom_rates?: boolean;
+    active?: boolean;
+    name?: string;
+    search?: string;
+};

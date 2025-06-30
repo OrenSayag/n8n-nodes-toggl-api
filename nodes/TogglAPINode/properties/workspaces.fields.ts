@@ -11,7 +11,7 @@ export const workspacesFields: INodeProperties[] = [
         displayOptions: {
             show: {
                 resource: ['workspaces'],
-                operation: ['get-workspace-projects'],
+                operation: ['get-workspace-projects', 'get-workspace-users'],
             },
         },
     },
@@ -37,7 +37,21 @@ export const workspacesFields: INodeProperties[] = [
         displayOptions: {
             show: {
                 resource: ['workspaces'],
-                operation: ['get-workspace-projects'],
+                operation: ['get-workspace-projects', 'get-workspace-users'],
+            },
+        },
+    },
+    {
+        displayName: 'Organization ID',
+        name: 'organizationId',
+        type: 'string',
+        default: '',
+        required: true,
+        description: 'Orgnization ID',
+        displayOptions: {
+            show: {
+                resource: ['workspaces'],
+                operation: ['get-workspace-users'],
             },
         },
     },
