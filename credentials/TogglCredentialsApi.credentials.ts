@@ -38,7 +38,7 @@ export class TogglCredentialsApi implements ICredentialType {
     // The block below tells how this credential can be tested
     test: ICredentialTestRequest = {
         request: {
-            baseURL: 'https://api.track.toggl.com/api/v9/',
+            baseURL: 'https://api.track.toggl.com/api/v9/me',
             auth: {
                 username: '={{ $credentials.api_key}}',
                 password: 'api_token',
