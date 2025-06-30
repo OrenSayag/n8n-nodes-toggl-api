@@ -1,7 +1,7 @@
 import { IExecuteFunctions } from 'n8n-workflow';
 import { getApiKey } from '../utils/get-api-key';
-import { TogglApi } from '../../../../services/toggl';
-import { GetWorkspaceProjectsOptions } from '../../../../services/toggl/types';
+import { TogglApi } from '../../services/toggl';
+import { GetWorkspaceProjectsOptions } from '../../services/toggl/types';
 
 export async function getWorkspaceProjects(ef: IExecuteFunctions) {
     const workspaceId = ef.getNodeParameter('workspaceId', 0);

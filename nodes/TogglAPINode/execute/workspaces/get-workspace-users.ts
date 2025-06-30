@@ -1,6 +1,6 @@
 import { IExecuteFunctions } from 'n8n-workflow';
-import { TogglApi } from '../../../../services/toggl';
-import { GetWorkspaceUsersOptions } from '../../../../services/toggl/types';
+import { TogglApi } from '../../services/toggl';
+import { GetWorkspaceUsersOptions } from '../../services/toggl/types';
 import { getApiKey } from '../utils/get-api-key';
 
 export async function getWorkspaceUsers(ef: IExecuteFunctions) {

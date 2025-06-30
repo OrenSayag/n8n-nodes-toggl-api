@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Reports } from './Reports';
+import { Reports } from './reports';
 import { Workspaces } from './workspaces';
 
 const BASE_URL = 'https://api.track.toggl.com/api/v9/';
