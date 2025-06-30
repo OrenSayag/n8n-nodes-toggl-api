@@ -11,11 +11,11 @@ const resourcesOptions: INodeProperties = {
     noDataExpression: true,
     options: [
         {
-            name: 'Workspaces',
+            name: 'Workspace',
             value: 'workspaces',
         },
         {
-            name: 'Reports',
+            name: 'Report',
             value: 'reports',
         },
     ],

@@ -7,7 +7,6 @@ export const reportsFields: INodeProperties[] = [
         type: 'string',
         default: '',
         required: true,
-        description: 'Workspace ID',
         displayOptions: {
             show: {
                 resource: ['reports'],

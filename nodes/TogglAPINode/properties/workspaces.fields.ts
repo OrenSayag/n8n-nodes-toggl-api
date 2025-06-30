@@ -7,7 +7,6 @@ export const workspacesFields: INodeProperties[] = [
         type: 'string',
         default: '',
         required: true,
-        description: 'Workspace ID',
         displayOptions: {
             show: {
                 resource: ['workspaces'],
@@ -20,7 +19,6 @@ export const workspacesFields: INodeProperties[] = [
         name: 'page',
         type: 'number',
         default: 1,
-        description: 'Page',
         displayOptions: {
             show: {
                 resource: ['workspaces'],
@@ -47,7 +45,6 @@ export const workspacesFields: INodeProperties[] = [
         type: 'string',
         default: '',
         required: true,
-        description: 'Orgnization ID',
         displayOptions: {
             show: {
                 resource: ['workspaces'],

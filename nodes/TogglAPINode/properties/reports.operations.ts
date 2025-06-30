@@ -13,8 +13,7 @@ export const reportsOperationsOptions: INodeProperties = {
     options: [
         {
             name: 'Get Workspace Time Entries',
-            action: 'Get Workspace Time Entries',
-            description: 'Get Workspace Time Entries',
+            action: 'Get workspace time entries',
             value: 'get-workspace-time-entries',
         },
     ],

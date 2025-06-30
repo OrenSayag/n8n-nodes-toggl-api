@@ -2,9 +2,9 @@ import { ICredentialTestRequest, ICredentialType, INodeProperties } from 'n8n-wo
 
 export class TogglCredentialsApi implements ICredentialType {
     name = 'togglCredentialsApi';
-    displayName = 'Toggl Credentials';
+    displayName = 'Toggl Credentials API';
 
-    // documentationUrl = 'https://your-docs-url';
+    documentationUrl = 'https://github.com/OrenSayag/n8n-nodes-toggl-api';
 
     properties: INodeProperties[] = [
         // The credentials to get from user and save encrypted.
@@ -14,6 +14,7 @@ export class TogglCredentialsApi implements ICredentialType {
             displayName: 'API Key',
             name: 'api_key',
             type: 'string',
+            typeOptions: { password: true },
             default: '',
         },
     ];

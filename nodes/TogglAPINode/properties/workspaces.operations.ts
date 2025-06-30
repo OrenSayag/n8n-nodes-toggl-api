@@ -13,14 +13,12 @@ export const workspacesOperationsOptions: INodeProperties = {
     options: [
         {
             name: 'Get Workspace Projects',
-            action: 'Get Workspace Projects',
-            description: 'Get Workspace Projects',
+            action: 'Get workspace projects',
             value: 'get-workspace-projects',
         },
         {
             name: 'Get Workspace Users',
-            action: 'Get Workspace Users',
-            description: 'Get Workspace Users',
+            action: 'Get workspace users',
             value: 'get-workspace-users',
         },
     ],
