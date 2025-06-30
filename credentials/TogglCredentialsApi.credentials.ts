@@ -2,7 +2,7 @@ import { ICredentialTestRequest, ICredentialType, INodeProperties } from 'n8n-wo
 
 export class TogglCredentialsApi implements ICredentialType {
     name = 'togglCredentialsApi';
-    displayName = 'Toggl Credentials API';
+    displayName = 'Toggl Credentials';
 
     // documentationUrl = 'https://your-docs-url';
 

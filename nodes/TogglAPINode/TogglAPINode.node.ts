@@ -17,6 +17,12 @@ export class TogglAPINode implements INodeType {
         defaults: {
             name: 'Toggle API Node',
         },
+        credentials: [
+            {
+                name: 'togglCredentialsApi',
+                required: true,
+            },
+        ],
         inputs: [NodeConnectionType.Main],
         outputs: [NodeConnectionType.Main],
         usableAsTool: true,
